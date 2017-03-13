@@ -211,7 +211,8 @@
 
         $(options.element).parent().attr('id', options.parent);
 
-        $(options.parentElement).addClass('row').append(
+        $(options.parentElement).append(
+            '<div class="row">' +
             (options.horizontal == false ? '   <div class="col-md-5">' : '   <div class="col-md-6">') +
             '       <h4><span class="unselected-title"></span> <small>' + options.lngOptions.showing + ' ' + '<span class="unselected-count"></span></small></h4>' +
             '       <input class="filter form-control filter-unselected" type="text" placeholder="' + options.lngOptions.search_placeholder + '" style="margin-bottom: 5px;">' +
@@ -224,7 +225,8 @@
             '       <input class="filter form-control filter-selected" type="text" placeholder="' + options.lngOptions.search_placeholder + '" style="margin-bottom: 5px;">' +
             (options.horizontal == false ? '' : createHorizontalButtons(2, options.moveAllBtn)) +
             '       <select class="selected" style="height: 200px; width: 100%;" multiple></select>' +
-            '   </div>');
+            '   </div>' +
+            '</div>');
 
         var unselected = $(options.parentElement + ' .unselected');
         var selected = $(options.parentElement + ' .selected');
