@@ -53,13 +53,13 @@ echo maksyutin\duallistbox\Widget::widget([
     ]
   ]);
 ```
-model - model for form
-attribute - model attribute for form
-title - view name for attribute
 
-data - model (Region::find());
-data_id - name attribute for id
-data_value - name attribute for value
+* model - model for form
+* attribute - model attribute for form
+* title - visible title of widget
+* data - ActiveQuery (Region::find()) or key-value array
+* data_id - When ActiveQuery, name attribute for id
+* data_value - When ActiveQuery, ActiveQuery name attribute for value
 
 ### Controller VIEW ###
 
